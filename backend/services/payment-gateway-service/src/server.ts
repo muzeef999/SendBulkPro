@@ -9,7 +9,7 @@ const PORT = 4003;
 app.use(express.json());
 
 
-app.get("/payment", (req:Request, res:Response) => {
+app.get("/api/payment", (req:Request, res:Response) => {
     res.send("Payment Gateway is running!")
 });
 

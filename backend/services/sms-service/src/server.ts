@@ -7,7 +7,7 @@ const app = express();
 const PORT = 4004;
 app.use(express.json());
 
-app.get("/sms", (req:Request, res:Response) => {
+app.get("/api/sms", (req:Request, res:Response) => {
     res.send("SMS-service gateway running!")
 })
 

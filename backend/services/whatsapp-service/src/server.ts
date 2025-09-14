@@ -7,7 +7,7 @@ const app = express();
 const PORT = 4005;
 app.use(express.json());
 
-app.get("/whatsapp", (req:Request, res:Response) => {
+app.get("/api/whatsapp", (req:Request, res:Response) => {
     res.send("Whatsapp-service gateway running!")
 })
 

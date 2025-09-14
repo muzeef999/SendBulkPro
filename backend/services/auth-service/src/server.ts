@@ -10,7 +10,7 @@ const PORT = 4001;
 app.use(express.json());
 
 
-app.get("/auth", (req: Request, res: Response) => {
+app.get("/api/auth", (req: Request, res: Response) => {
   res.send("Auth Service is running!");
 });
 
