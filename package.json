@@ -1,0 +1,31 @@
+{
+  "name": "sendbulkpro.com",
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "backend/api-gateway",
+    "backend/services/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm --workspace frontend run dev",
+    "dev:api-gateway": "npm --workspace backend/api-gateway run dev",
+    "dev:auth": "npm --workspace backend/services/auth-service run dev",
+    "dev:mail": "npm --workspace backend/services/mail-service run dev",
+    "dev:sms": "npm --workspace backend/services/sms-service run dev",
+    "dev:whatsapp": "npm --workspace backend/services/whatsapp-service run dev",
+    "dev:payment": "npm --workspace backend/services/payment-gateway-service run",
+    "dev:all": "concurrently \"npm run dev:api-gateway\" \"npm run dev:auth\" \"npm run dev:mail\" \"npm run dev:sms\" \"npm run dev:whatsapp\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "zod": "^4.1.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.4.0",
+    "concurrently": "^9.2.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}
